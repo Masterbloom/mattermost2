@@ -1,0 +1,17 @@
+{
+  "ServiceSettings": {
+    "SiteURL": "https://mattermost.onrender.com",
+    "EnableInsecureOutgoingConnections": true
+  },
+  "SqlSettings": {
+    "DriverName": "sqlite3",
+    "DataSource": "./data/mattermost.db"
+  },
+  "LogSettings": {
+    "EnableConsole": true,
+    "ConsoleLevel": "INFO"
+  },
+  "TeamSettings": {
+    "EnableOpenServer": true
+  }
+}

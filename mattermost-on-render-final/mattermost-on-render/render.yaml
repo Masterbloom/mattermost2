@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mattermost
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: MM_SQLSETTINGS_DRIVERNAME
+        value: sqlite3
+      - key: MM_SQLSETTINGS_DATASOURCE
+        value: ./data/mattermost.db
+      - key: MM_SERVICESETTINGS_SITEURL
+        value: https://mattermost.onrender.com
+      - key: MM_SERVICESETTINGS_ENABLEINSECUREOUTGOINGCONNECTIONS
+        value: "true"
